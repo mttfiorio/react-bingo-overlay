@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: greenyellow;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.display {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.bingo-ball {
+    display: block;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px; 
+    margin-top: auto; 
+    background: radial-gradient(circle at 80px 80px,rgb(146, 137, 87), #ffffff );
+}
+
+.bingo-ball.first {
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(circle at 120px 120px, rgb(146, 137, 87), #ffffff);
 }
