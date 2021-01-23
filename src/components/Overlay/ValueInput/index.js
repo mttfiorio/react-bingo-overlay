@@ -12,7 +12,7 @@ const ValueInput = () => {
     return (
         <div className="value-input">
 
-            <input type="text" onChange={updateValue} />
+            <input type="number" onChange={updateValue} />
             <button onClick={() => bingoContext.insertNumber(currentInput)}>Insert</button>
 
         </div>
