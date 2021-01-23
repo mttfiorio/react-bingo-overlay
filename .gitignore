@@ -1,4 +1,5 @@
 build
 node_modules
-*.eslintcache
-.eslintcache
+eslintcache
+.*
+!/.gitignore
