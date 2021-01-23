@@ -33,6 +33,10 @@ export const BingoProvider = props => {
             return;
         }
 
+        if (number < 0 || number > 90) {
+            return;
+        }
+
         setNumbers(prev => [number, ...prev]);
     }
 
