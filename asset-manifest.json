@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-overlay/static/css/main.e2a63215.chunk.css",
-    "main.js": "/react-overlay/static/js/main.aae9f1fd.chunk.js",
-    "main.js.map": "/react-overlay/static/js/main.aae9f1fd.chunk.js.map",
+    "main.css": "/react-overlay/static/css/main.7040bec8.chunk.css",
+    "main.js": "/react-overlay/static/js/main.02534086.chunk.js",
+    "main.js.map": "/react-overlay/static/js/main.02534086.chunk.js.map",
     "runtime-main.js": "/react-overlay/static/js/runtime-main.bf4efcf9.js",
     "runtime-main.js.map": "/react-overlay/static/js/runtime-main.bf4efcf9.js.map",
     "static/js/2.764b2f79.chunk.js": "/react-overlay/static/js/2.764b2f79.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.cc911339.chunk.js": "/react-overlay/static/js/3.cc911339.chunk.js",
     "static/js/3.cc911339.chunk.js.map": "/react-overlay/static/js/3.cc911339.chunk.js.map",
     "index.html": "/react-overlay/index.html",
-    "static/css/main.e2a63215.chunk.css.map": "/react-overlay/static/css/main.e2a63215.chunk.css.map",
+    "static/css/main.7040bec8.chunk.css.map": "/react-overlay/static/css/main.7040bec8.chunk.css.map",
     "static/js/2.764b2f79.chunk.js.LICENSE.txt": "/react-overlay/static/js/2.764b2f79.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bf4efcf9.js",
     "static/js/2.764b2f79.chunk.js",
-    "static/css/main.e2a63215.chunk.css",
-    "static/js/main.aae9f1fd.chunk.js"
+    "static/css/main.7040bec8.chunk.css",
+    "static/js/main.02534086.chunk.js"
   ]
 }
