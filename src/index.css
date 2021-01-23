@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: greenyellow;
+  background-color: green;
 
 }
 
@@ -22,16 +24,23 @@ code {
 }
 
 .bingo-ball {
-    display: block;
+    font-family: 'Poppins';
+    font-size: 50px;
     border-radius: 50%;
     height: 100px;
     width: 100px; 
+    line-height:100px;
     margin-top: auto; 
     background: radial-gradient(circle at 80px 80px,rgb(146, 137, 87), #ffffff );
-}
+    text-align: center;
+    vertical-align: middle;  
+    margin-right: 10px;
+  }
 
 .bingo-ball.first {
+  font-size: 100px;
   height: 150px;
   width: 150px;
+  line-height:150px;
   background: radial-gradient(circle at 120px 120px, rgb(146, 137, 87), #ffffff);
 }
