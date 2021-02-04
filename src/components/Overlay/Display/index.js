@@ -1,23 +1,21 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import BingoContext from '../BingoContext';
+import BingoBall from './BingoBall'
 
 const Display = () => {
     const bingoContext = useContext(BingoContext);
 
+
     return (
         <div className='display'>
-            {bingoContext.numbers.map((number, i) => {
-                var classNames = 'bingo-ball';
-                if (i === 0) {
-                    classNames += ' first';
-                };
+            {bingoContext.balls.map((ball, i) => {
+                const isFirst = i === 0;
 
                 return (
-                    <div key={i} className={classNames} onClick={
-                        () => bingoContext.removeNumber(number)
-                    }>
-                        {number}
-                    </div>
+                    <BingoBall
+                        handleOnClick={() => bingoContext.removeBall(ball.number)}
+                        ball={ball}
+                        isFirst={isFirst} />
                 );
             })}
         </div>

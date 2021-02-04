@@ -11,13 +11,17 @@ const ValueInput = () => {
 
     const onKeyPress = e => {
         if (e.charCode === 13) {
-            bingoContext.insertNumber(currentInput);
+            const sanitizedInput = parseInt(currentInput, 10);
+
+            bingoContext.insertBall(sanitizedInput);
             setCurrentInput('');
         }
     }
 
     const onClick = e => {
-        bingoContext.insertNumber(currentInput)
+        const sanitizedInput = parseInt(currentInput, 10);
+
+        bingoContext.insertBall(sanitizedInput)
         setCurrentInput('');
     }
 

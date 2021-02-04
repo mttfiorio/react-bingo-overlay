@@ -1,30 +1,39 @@
 import { useState, createContext, useEffect } from 'react';
+import { getRandomColor } from '../../../ultils'
 
 export const BingoContext = createContext();
 
 export const BingoProvider = props => {
     const storageName = "numbers-saved-locally";
-    const [numbers, setNumbers] = useState([]);
+    const [balls, setBalls] = useState([]);
 
     //Load locally
     useEffect(() => {
         const json = localStorage.getItem(storageName);
         const savedNumbers = JSON.parse(json);
         if (savedNumbers) {
-            setNumbers(savedNumbers);
+            setBalls(savedNumbers);
         }
     }, []);
 
     //Save locally
     useEffect(() => {
-        const json = JSON.stringify(numbers);
+        const json = JSON.stringify(balls);
         localStorage.setItem(storageName, json);
-    }, [numbers]);
+    }, [balls]);
 
-    const insertNumber = number => {
+    const insertBall = number => {
+        if (isNaN(number)) {
+            return;
+        }
+
+        if (number < 0 || number > 90) {
+            return;
+        }
+
         var alreadyExists = false;
-        numbers.forEach(element => {
-            if (element === number) {
+        balls.forEach(ball => {
+            if (ball.number === number) {
                 alreadyExists = true;
             }
         })
@@ -33,21 +42,23 @@ export const BingoProvider = props => {
             return;
         }
 
-        if (number < 0 || number > 90) {
-            return;
+        const newBall = {
+            number: number,
+            backgroundColor: getRandomColor('9ABCDEF'),
+            numberColor: getRandomColor('012345678')
         }
 
-        setNumbers(prev => [number, ...prev]);
+        setBalls(prev => [newBall, ...prev]);
     }
 
-    const removeNumber = number => {
-        setNumbers(prev => prev.filter(el => el !== number));
+    const removeBall = number => {
+        setBalls(prev => prev.filter(ball => ball.number !== number));
     }
 
     const state = {
-        numbers: numbers,
-        insertNumber: insertNumber,
-        removeNumber: removeNumber
+        balls: balls,
+        insertBall: insertBall,
+        removeBall: removeBall
     };
 
     return <BingoContext.Provider value={state}>{props.children}</BingoContext.Provider>;

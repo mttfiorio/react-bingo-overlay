@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: green;
+  background-color: #00FF00;
   overflow: hidden;
 }
 
@@ -23,24 +23,63 @@ code {
   display: flex;
 }
 
-.bingo-ball {
-    font-family: 'Poppins';
-    font-size: 50px;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px; 
-    line-height:100px;
-    margin-top: auto; 
-    background: radial-gradient(circle at 80px 80px,rgb(146, 137, 87), #ffffff );
-    text-align: center;
-    vertical-align: middle;  
-    margin-right: 10px;
-  }
+.ball-container {
+  position: relative;
+  float: left;
+  width: 140px;
+  height: 110px;
+  bottom: -40px; 
+}
 
-.bingo-ball.first {
-  font-size: 100px;
-  height: 150px;
+.ball-container.first{
+  width: 190px;
+  height: 160px;
+  bottom: 15px;
+}
+
+.ball-container .bingo-ball {
+  position:absolute;
+  bottom: 0;
+  font-family: 'Poppins';
+  font-size: 50px;
+  border-radius: 50%;
+  border: solid 10px;
+  height: 90px;
+  width: 100px; 
+  line-height:100px;
+  margin-top: auto; 
+  text-align: center;
+  vertical-align: middle;  
+  margin-right: 10px;
+}
+
+.ball-container .bingo-ball .text{
+  margin: -5px;
+}
+
+.ball-container .back {
+  position: absolute;
+  height: 110px;
+  width: 120px;
+  margin-top: 10px;
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.ball-container.first  .bingo-ball {
+  font-size: 75px;
+  height: 130px;
   width: 150px;
-  line-height:150px;
-  background: radial-gradient(circle at 120px 120px, rgb(146, 137, 87), #ffffff);
+  line-height: 150px;
+  border: solid 15px;
+}
+
+.ball-container.first .bingo-ball .text{
+  margin: -7px;
+}
+
+.ball-container.first .back{
+  height: 160px;
+  width: 180px;
+  margin-top: 15px;
 }
