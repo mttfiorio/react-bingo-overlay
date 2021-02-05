@@ -40,13 +40,13 @@ export const euclideonDistance = (v1, v2) => {
 };
 
 
-export const getRandomColor = letters => {
+export const getRandomColor = (letters, distanceFromGreen) => {
     var color = '#';
     for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * letters.length)];
     }
 
-    if (euclideonDistance(HEX2RGB(color), [0, 255, 0]) <= 100) {
+    if (euclideonDistance(HEX2RGB(color), [0, 255, 0]) <= distanceFromGreen) {
         color = getRandomColor(letters);
     }
 

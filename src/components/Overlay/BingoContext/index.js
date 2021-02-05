@@ -44,8 +44,8 @@ export const BingoProvider = props => {
 
         const newBall = {
             number: number,
-            backgroundColor: getRandomColor('9ABCDEF'),
-            numberColor: getRandomColor('012345678')
+            backgroundColor: getRandomColor('9ABCDEF', 300),
+            numberColor: getRandomColor('012345678', 300)
         }
 
         setBalls(prev => [newBall, ...prev]);

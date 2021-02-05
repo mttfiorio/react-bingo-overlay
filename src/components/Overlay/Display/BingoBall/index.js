@@ -6,8 +6,6 @@ const BingoBall = ({ ball, isFirst, handleOnClick }) => {
         color: ball.numberColor
     }
 
-    console.log(style)
-
     var containerClass = 'ball-container';
 
     if (isFirst) {
