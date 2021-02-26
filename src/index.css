@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600');
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #00FF00;
@@ -40,7 +38,6 @@ code {
 .ball-container .bingo-ball {
   position:absolute;
   bottom: 0;
-  font-family: 'Poppins';
   font-size: 50px;
   border-radius: 50%;
   border: solid 10px;
@@ -54,7 +51,7 @@ code {
 }
 
 .ball-container .bingo-ball .text{
-  margin: -5px;
+  margin: -10px;
 }
 
 .ball-container .back {
@@ -75,7 +72,7 @@ code {
 }
 
 .ball-container.first .bingo-ball .text{
-  margin: -7px;
+  margin: -18px;
 }
 
 .ball-container.first .back{

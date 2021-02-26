@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react';
-import { getRandomColor } from '../../../ultils'
+import { getColorCombination } from '../../../ultils'
 
 export const BingoContext = createContext();
 
@@ -42,10 +42,12 @@ export const BingoProvider = props => {
             return;
         }
 
+        const colors = getColorCombination();
+
         const newBall = {
             number: number,
-            backgroundColor: getRandomColor('9ABCDEF', 300),
-            numberColor: getRandomColor('012345678', 300)
+            backgroundColor: colors[0],
+            numberColor: colors[1]
         }
 
         setBalls(prev => [newBall, ...prev]);

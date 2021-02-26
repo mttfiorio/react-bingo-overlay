@@ -52,3 +52,17 @@ export const getRandomColor = (letters, distanceFromGreen) => {
 
     return color;
 }
+
+const darkColors = ['#006EFF','#E96C00','#4F2C5E','#C8922E'];
+const lightColors = ['#F9E5B4','#C8DDED','#F9F2F2','#EDDCF4'];
+export const getColorCombination = () => {
+    const color1 = darkColors[Math.floor( Math.random() * darkColors.length)];
+    const color2 = lightColors[ Math.floor(Math.random() * lightColors.length)];
+
+    console.log(Math.random() * darkColors.length)
+    if(Math.random() >= 0.5){
+        return [color1, color2]
+    }
+
+    return [color2, color1]
+}
