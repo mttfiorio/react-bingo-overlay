@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Running application at
 
-http://matfio.github.io/react-overlay
+https://matfio.github.io/react-bingo-overlay/
 
 ### How to use
 
